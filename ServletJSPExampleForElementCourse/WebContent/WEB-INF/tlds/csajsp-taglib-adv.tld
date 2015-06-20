@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+  http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+  version="2.0">
+  <description>
+    Some more advanced custom tags to illustrate
+    dealing with body content, looping, using complex
+    runtime values, and communicating with enclosing tags.
+    From JSP taglib tutorials at 
+    http://courses.coreservlets.com/Course-Materials/
+  </description>
+  <tlib-version>1.0</tlib-version>
+  <short-name>csajsp-taglib-adv</short-name>
+  
+  <tag>
+    <description>
+      Converts special HTML characters such as less than 
+      and greater than signs to their corresponding HTML  
+      character entities such as &lt; and &gt;.
+    </description>
+    <name>filterhtml</name>
+    <tag-class>coreservlets.tags.HtmlFilterTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  
+  <tag>
+    <description>
+      Loops specified number of times.
+    </description>
+    <name>for</name>
+    <tag-class>coreservlets.tags.ForTag</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <description>
+        Number of times to repeat body.
+      </description>
+      <name>count</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+  <tag>
+    <description>
+      Given an array of arrays, puts values into a table
+    </description>
+    <name>makeTable</name>
+    <tag-class>coreservlets.tags.MakeTableTag</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <description>
+        An array of arrays. The top-level arrays
+        represents the rows, the sub-arrays represent
+        the column entries. 
+      </description>
+      <name>rowItems</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <description>
+        Style sheet class name for table header. 
+      </description>
+      <name>headerClass</name>
+      <required>false</required>
+    </attribute>
+    <attribute>
+      <description>
+        Style sheet class name for table body. 
+      </description>
+      <name>bodyClass</name>
+      <required>false</required>
+    </attribute>
+  </tag>
+
+  <tag>
+    <description>
+      Loops down each element in an array
+    </description>
+    <name>forEach</name>
+    <tag-class>coreservlets.tags.ForEachTag</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <description>
+        The array of elements.
+      </description>
+      <name>items</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <description>
+        The name of the local variable that 
+        each entry will be assigned to.
+      </description>
+      <name>var</name>
+      <required>true</required>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <description>If tag</description>
+    <name>if</name>
+    <tag-class>coreservlets.tags.IfTag</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <description>Condition of the if</description>
+      <name>test</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  
+  <tag>
+    <description>Then tag (goes with If tag)</description>
+    <name>then</name>
+    <tag-class>coreservlets.tags.ThenTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  
+  <tag>
+    <description>Else tag (goes with If tag)</description>
+    <name>else</name>
+    <tag-class>coreservlets.tags.ElseTag</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+</taglib>
