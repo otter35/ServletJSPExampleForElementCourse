@@ -17,9 +17,6 @@ public class TestServlet2 extends HttpServlet {
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
     String title = "Test Servlet with Utilities";
-    
-    // ?Quiz(super high) : Request URL parameter(memberId=135790&name=Jane) and Response by out.println 
-    // ?Hint : ServletUtilities.getIntParameter()    
     out.println
       (ServletUtilities.headWithTitle(title) +
        "<body bgcolor=\"#fdf5e6\">\n" +

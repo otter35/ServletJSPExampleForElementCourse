@@ -9,8 +9,6 @@ import javax.servlet.http.*;
  *  text as with the HelloWorld servlet.
  */
 
-// ?Quiz : The TestServlet, accessed via the URL given in the @WebServlet annotation
-// ?Hint : @WebServlet annotation
 @WebServlet("/test1")
 public class TestServlet extends HttpServlet {
   @Override

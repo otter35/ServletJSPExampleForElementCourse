@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
-<!-- ?Quiz(high) : The TestServlet, accessed via the URL given in the web.xml file
-      Hint : <a href="test2">
   <servlet>
-    <servlet-name>?</servlet-name>
-    <servlet-class>?</servlet-class>
+    <servlet-name>Test</servlet-name>
+    <servlet-class>testPackage.TestServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>?</servlet-name>
-    <url-pattern>?</url-pattern>
+    <servlet-name>Test</servlet-name>
+    <url-pattern>/test2</url-pattern>
   </servlet-mapping>
- -->  
 </web-app>
